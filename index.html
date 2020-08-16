@@ -134,13 +134,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-08-10T23:34:37.259Z">2020-08-11</time>
+                <time class="level-item has-text-grey" datetime="2020-08-16T06:43:53.000Z">2020-08-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/k8s/">k8s</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes lesen (Über 1310 Worte)
+                    9 minutes lesen (Über 1290 Worte)
                 </span>
                 
                 
@@ -149,12 +153,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/08/11/存活探针和就绪探针/"></a>
+                <a class="has-link-black-ter" href="/2020/08/16/k8s容器健康检查/">k8s容器健康检查</a>
             
         </h1>
         <div class="content">
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: k8s容器检测探针简介</span><br><span class="line">date: 2020-08-13</span><br><span class="line">categories: k8s</span><br><span class="line">tags: [k8s,Liveliness,Readiness]</span><br></pre></td></tr></table></figure>
-<h3 id="k8s容器检查探针"><a href="#k8s容器检查探针" class="headerlink" title="k8s容器检查探针"></a>k8s容器检查探针</h3><p>当容器部署在k8s中的时候，k8s通过 liveness probe 和 readiness probe来监测容器的健康状况，其中liveness probe 和 readiness probe是由容器所在node上的kubelet定期执行的，那关于iveness probe  和 readiness probe分别有以下几个问题</p>
+            <h3 id="k8s容器检查探针"><a href="#k8s容器检查探针" class="headerlink" title="k8s容器检查探针"></a>k8s容器检查探针</h3><p>当容器部署在k8s中的时候，k8s通过 liveness probe 和 readiness probe来监测容器的健康状况，其中liveness probe 和 readiness probe是由容器所在node上的kubelet定期执行的，那关于iveness probe  和 readiness probe分别有以下几个问题</p>
 <p><strong>liveness probe</strong></p>
 <p>1.如何理解”存活“状态？</p>
 <p>2.容器配置了存活探针和没有配置存活探针有什么区别？</p>
@@ -178,7 +181,7 @@
 <ul>
 <li>ExecAction</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">apiVersion: v1</span><br><span class="line">kind: Pod</span><br><span class="line">metadata:</span><br><span class="line">  labels:</span><br><span class="line">    test: liveness</span><br><span class="line">  name: test-liveness-exec</span><br><span class="line">spec:</span><br><span class="line">  containers:</span><br><span class="line">  - name: liveness</span><br><span class="line">    image: busybox</span><br><span class="line">    args:</span><br><span class="line">    - /bin/sh</span><br><span class="line">    - -c</span><br><span class="line">    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600</span><br><span class="line">    livenessProbe: //存活探针</span><br><span class="line">      exec: //探针类型为ExecAction</span><br><span class="line">        command: //指定命令</span><br><span class="line">        - cat</span><br><span class="line">        - /tmp/healthy</span><br><span class="line">      initialDelaySeconds: 5 //容器启动后5s后开始执行命令进行探测</span><br><span class="line">      periodSeconds: 5  //此后每隔5s探测一次</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: v1</span><br><span class="line">kind: Pod</span><br><span class="line">metadata:</span><br><span class="line">  labels:</span><br><span class="line">    test: liveness</span><br><span class="line">  name: test-liveness-exec</span><br><span class="line">spec:</span><br><span class="line">  containers:</span><br><span class="line">  - name: liveness</span><br><span class="line">    image: busybox</span><br><span class="line">    args:</span><br><span class="line">    - /bin/sh</span><br><span class="line">    - -c</span><br><span class="line">    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600</span><br><span class="line">    livenessProbe: //存活探针</span><br><span class="line">      exec: //探针类型为ExecAction</span><br><span class="line">        command: //指定命令</span><br><span class="line">        - cat</span><br><span class="line">        - /tmp/healthy</span><br><span class="line">      initialDelaySeconds: 5 //容器启动后5s后开始执行命令进行探测</span><br><span class="line">      periodSeconds: 5  //此后每隔5s探测一次</span><br></pre></td></tr></table></figure>
 <ul>
 <li>TCPSocketAction</li>
 </ul>
@@ -272,11 +275,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Kategorien
+                        Kategorie
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            0
+                            1
                         </p>
                     </a>
                 </div>
@@ -288,7 +291,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            0
+                            3
                         </p>
                     </a>
                 </div>
@@ -315,7 +318,15 @@
                 Kategorien
             </h3>
             <ul class="menu-list">
-            
+            <li>
+        <a class="level is-marginless" href="/categories/k8s/">
+            <span class="level-start">
+                <span class="level-item">k8s</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
@@ -356,18 +367,18 @@
         
         <article class="media">
             
-            <a href="/2020/08/11/存活探针和就绪探针/" class="media-left">
+            <a href="/2020/08/16/k8s容器健康检查/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="k8s容器健康检查">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-10T23:34:37.259Z">2020-08-11</time></div>
-                    <a href="/2020/08/11/存活探针和就绪探针/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-16T06:43:53.000Z">2020-08-16</time></div>
+                    <a href="/2020/08/16/k8s容器健康检查/" class="title has-link-black-ter is-size-6 has-text-weight-normal">k8s容器健康检查</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/k8s/">k8s</a>
                     </p>
                 </div>
             </div>
@@ -383,6 +394,27 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Liveliness/">
+                        <span class="tag">Liveliness</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Readiness/">
+                        <span class="tag">Readiness</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/k8s/">
+                        <span class="tag">k8s</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
@@ -425,7 +457,14 @@
 </div>
 
         
-            
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/Liveliness/" style="font-size: 10px;">Liveliness</a> <a href="/tags/Readiness/" style="font-size: 10px;">Readiness</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a>
+    </div>
+</div>
         
         </div>
     
@@ -446,18 +485,18 @@
         
         <article class="media">
             
-            <a href="/2020/08/11/存活探针和就绪探针/" class="media-left">
+            <a href="/2020/08/16/k8s容器健康检查/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="k8s容器健康检查">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-10T23:34:37.259Z">2020-08-11</time></div>
-                    <a href="/2020/08/11/存活探针和就绪探针/" class="title has-link-black-ter is-size-6 has-text-weight-normal"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-16T06:43:53.000Z">2020-08-16</time></div>
+                    <a href="/2020/08/16/k8s容器健康检查/" class="title has-link-black-ter is-size-6 has-text-weight-normal">k8s容器健康检查</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/k8s/">k8s</a>
                     </p>
                 </div>
             </div>
@@ -473,6 +512,27 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Liveliness/">
+                        <span class="tag">Liveliness</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Readiness/">
+                        <span class="tag">Readiness</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/k8s/">
+                        <span class="tag">k8s</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
@@ -515,7 +575,14 @@
 </div>
 
     
-        
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/Liveliness/" style="font-size: 10px;">Liveliness</a> <a href="/tags/Readiness/" style="font-size: 10px;">Readiness</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a>
+    </div>
+</div>
     
     
 </div>
