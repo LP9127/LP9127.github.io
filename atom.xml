@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://LP9127.github.io/"/>
+  <link href="https://liupei.link/"/>
   <updated>2020-08-16T06:51:36.043Z</updated>
-  <id>http://LP9127.github.io/</id>
+  <id>https://liupei.link/</id>
   
   <author>
     <name>liupei</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>k8s容器健康检查</title>
-    <link href="http://LP9127.github.io/2020/08/16/k8s%E5%AE%B9%E5%99%A8%E5%81%A5%E5%BA%B7%E6%A3%80%E6%9F%A5/"/>
-    <id>http://LP9127.github.io/2020/08/16/k8s容器健康检查/</id>
+    <link href="https://liupei.link/2020/08/16/k8s%E5%AE%B9%E5%99%A8%E5%81%A5%E5%BA%B7%E6%A3%80%E6%9F%A5/"/>
+    <id>https://liupei.link/2020/08/16/k8s容器健康检查/</id>
     <published>2020-08-16T06:43:53.000Z</published>
     <updated>2020-08-16T06:51:36.043Z</updated>
     
@@ -34,14 +34,14 @@
     
     </summary>
     
-      <category term="k8s" scheme="http://LP9127.github.io/categories/k8s/"/>
+      <category term="k8s" scheme="https://liupei.link/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://LP9127.github.io/tags/k8s/"/>
+      <category term="k8s" scheme="https://liupei.link/tags/k8s/"/>
     
-      <category term="Liveliness" scheme="http://LP9127.github.io/tags/Liveliness/"/>
+      <category term="Liveliness" scheme="https://liupei.link/tags/Liveliness/"/>
     
-      <category term="Readiness" scheme="http://LP9127.github.io/tags/Readiness/"/>
+      <category term="Readiness" scheme="https://liupei.link/tags/Readiness/"/>
     
   </entry>
   
