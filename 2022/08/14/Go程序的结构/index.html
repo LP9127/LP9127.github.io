@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="Go程序的结构">
+
+
+
+
+  <meta name="keywords" content="Go,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Home">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://liupei.link/2022/08/14/Go程序的结构/">
+
+
+<meta name="description" content="一个最基本的Go程序1234567package main //定义一个包import &quot;fmt&quot; //声明fmt包的导入路径func main() &amp;#123; //main函数	fmt.Println(&quot;hello, world&quot;) //Println函数定义于fmt包中&amp;#125; 1.包的概念 包（package）是Go语言的基本组成单元，一个Go程序本质上就是一组包的集合  整个Go程序">
+<meta name="keywords" content="Go">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go程序的结构">
+<meta property="og:url" content="https://liupei.link/2022/08/14/Go程序的结构/index.html">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="一个最基本的Go程序1234567package main //定义一个包import &quot;fmt&quot; //声明fmt包的导入路径func main() &amp;#123; //main函数	fmt.Println(&quot;hello, world&quot;) //Println函数定义于fmt包中&amp;#125; 1.包的概念 包（package）是Go语言的基本组成单元，一个Go程序本质上就是一组包的集合  整个Go程序">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2022-08-14T07:08:08.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Go程序的结构">
+<meta name="twitter:description" content="一个最基本的Go程序1234567package main //定义一个包import &quot;fmt&quot; //声明fmt包的导入路径func main() &amp;#123; //main函数	fmt.Println(&quot;hello, world&quot;) //Println函数定义于fmt包中&amp;#125; 1.包的概念 包（package）是Go语言的基本组成单元，一个Go程序本质上就是一组包的集合  整个Go程序">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> Go程序的结构 - Home </title>
+  <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Home</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Go程序的结构
+        
+      </h1>
+
+      <time class="post-time">
+          Aug 14 2022
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h3 id="一个最基本的Go程序"><a href="#一个最基本的Go程序" class="headerlink" title="一个最基本的Go程序"></a>一个最基本的Go程序</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main <span class="comment">//定义一个包</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span> <span class="comment">//声明fmt包的导入路径</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; <span class="comment">//main函数</span></span><br><span class="line">	fmt.Println(<span class="string">"hello, world"</span>) <span class="comment">//Println函数定义于fmt包中</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="1-包的概念"><a href="#1-包的概念" class="headerlink" title="1.包的概念"></a>1.包的概念</h4><ul>
+<li><p>包（package）是Go语言的基本组成单元，一个Go程序本质上就是一组包的集合</p>
+</li>
+<li><p>整个Go程序中只能存在一个main包</p>
+</li>
+</ul>
+<h4 id="2-main函数"><a href="#2-main函数" class="headerlink" title="2.main函数"></a>2.main函数</h4><p>当执行一个可执行的Go程序时，程序执行的入口就是main函数</p>
+<h4 id="3-声明包的导入路径"><a href="#3-声明包的导入路径" class="headerlink" title="3.声明包的导入路径"></a>3.声明包的导入路径</h4><p>import “fmt”指的是，导入标准库fmt目录下的包</p>
+<h4 id="4-fmt包"><a href="#4-fmt包" class="headerlink" title="4.fmt包"></a>4.fmt包</h4><p>fmt.Println(“hello, world”)中的fmt指的是包名，和import “fmt”中的fmt不一样</p>
+<h4 id="5-Println函数"><a href="#5-Println函数" class="headerlink" title="5.Println函数"></a>5.Println函数</h4><p>Println函数位于标准库fmt目录下的fmt包中，Println的首字母大写，代表对fmt包外的代码可见，如果全部是小写，代表只在声明它的包内可见</p>
+<h3 id="Go程序的编译和执行"><a href="#Go程序的编译和执行" class="headerlink" title="Go程序的编译和执行"></a>Go程序的编译和执行</h3><h4 id="1-使用go-build命令进行编译"><a href="#1-使用go-build命令进行编译" class="headerlink" title="1.使用go build命令进行编译"></a>1.使用go build命令进行编译</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">go</span> build main.<span class="keyword">go</span><span class="comment">//编译，得到一个二进制文件</span></span><br><span class="line">$ ./main  <span class="comment">//执行</span></span><br></pre></td></tr></table></figure>
+<p>使用go build命令进行编译，编译成功后得到一个可执行二进制文件，这个二进制文件在没有go的环境中也可以执行</p>
+<h4 id="2-使用go-run命令可直接执行go源文件"><a href="#2-使用go-run命令可直接执行go源文件" class="headerlink" title="2.使用go run命令可直接执行go源文件"></a>2.使用go run命令可直接执行go源文件</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">go</span> run main.<span class="keyword">go</span></span><br></pre></td></tr></table></figure>
+<p>go run命令更多的是开发和调试阶段使用，在实际的项目中要先使用go build进行构建</p>
+<h3 id="Go-module"><a href="#Go-module" class="headerlink" title="Go module"></a>Go module</h3><blockquote>
+<p>Go module是Go默认的包依赖管理机制和Go源码构建机制。</p>
+<p>一个 module 就是一些包的集合，这些包和 module 一起打版本、发布和分发。</p>
+<p>Go Module 的核心是一个名为 go.mod 的文件，在这个文件中存储了这个 module 对第三方依赖的全部信息。</p>
+</blockquote>
+<h4 id="1-go-mod文件的生成"><a href="#1-go-mod文件的生成" class="headerlink" title="1.go.mod文件的生成"></a>1.go.mod文件的生成</h4><p>进入目标目录，执行</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">go</span> mod init github.com/hellomodule  <span class="comment">//go mod 初始化的时候一般用源代码存储仓库，使 go 工具能下载到，如果只是本地测试可以随便起名，如: example/hellomodule</span></span><br></pre></td></tr></table></figure>
+<p>执行完成之后，在目标目录下成功一个go.mod文件，这个目标目录称为被声明的module的根目录</p>
+<h4 id="2-添加依赖包的版本信息"><a href="#2-添加依赖包的版本信息" class="headerlink" title="2.添加依赖包的版本信息"></a>2.添加依赖包的版本信息</h4><ul>
+<li><p>手动添加</p>
+</li>
+<li><p>使用go mod tidy命令自动添加</p>
+</li>
+</ul>
+<h4 id="3-go-sum文件"><a href="#3-go-sum文件" class="headerlink" title="3.go.sum文件"></a>3.go.sum文件</h4><blockquote>
+<p>go.sum 的文件，这个文件记录了 hellomodule 的直接依赖和间接依赖包的相关版本的 hash 值，用来校验本地包的真实性。在构建的时候，如果本地依赖包的 hash 值与 go.sum 文件中记录的不一致，就会被拒绝构建</p>
+</blockquote>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Go/">Go</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2022/08/13/20220813芭蕾日记/">
+        <span class="next-text nav-default">20220813芭蕾日记</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2022/08/14/Go程序的结构/" data-title="Go程序的结构" data-url="https://liupei.link/2022/08/14/Go程序的结构/">
+      </div>
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2020 -
+    
+    2022
+    <span class="footer-author">liupei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"test1"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
