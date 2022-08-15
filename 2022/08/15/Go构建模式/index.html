@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="Go构建模式">
+
+
+
+
+  <meta name="keywords" content="Go,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Home">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://liupei.link/2022/08/15/Go构建模式/">
+
+
+<meta name="description" content="1.Go构建模式的演化1.1 什么是Go的构建模式Go程序的构建过程就是确定包版本，编译包以及将编译后得到的目标文件链接在一起的过程 1.2 GOPATH的构建模式1.GOPATH构建模式的构建过程  在GOPATH构建模式下，Go编译的时候，会在GOPATH的环境变量目录下寻找依赖的第三方包，如果找到了，就使用这个第三方包进行编译，没找到，就会报编译错误  如果在本地没有找到第三方包，可以使用g">
+<meta name="keywords" content="Go">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go构建模式">
+<meta property="og:url" content="https://liupei.link/2022/08/15/Go构建模式/index.html">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="1.Go构建模式的演化1.1 什么是Go的构建模式Go程序的构建过程就是确定包版本，编译包以及将编译后得到的目标文件链接在一起的过程 1.2 GOPATH的构建模式1.GOPATH构建模式的构建过程  在GOPATH构建模式下，Go编译的时候，会在GOPATH的环境变量目录下寻找依赖的第三方包，如果找到了，就使用这个第三方包进行编译，没找到，就会报编译错误  如果在本地没有找到第三方包，可以使用g">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2022-08-15T14:39:58.339Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Go构建模式">
+<meta name="twitter:description" content="1.Go构建模式的演化1.1 什么是Go的构建模式Go程序的构建过程就是确定包版本，编译包以及将编译后得到的目标文件链接在一起的过程 1.2 GOPATH的构建模式1.GOPATH构建模式的构建过程  在GOPATH构建模式下，Go编译的时候，会在GOPATH的环境变量目录下寻找依赖的第三方包，如果找到了，就使用这个第三方包进行编译，没找到，就会报编译错误  如果在本地没有找到第三方包，可以使用g">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> Go构建模式 - Home </title>
+  <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Home</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Go构建模式
+        
+      </h1>
+
+      <time class="post-time">
+          Aug 15 2022
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h3 id="1-Go构建模式的演化"><a href="#1-Go构建模式的演化" class="headerlink" title="1.Go构建模式的演化"></a>1.Go构建模式的演化</h3><h4 id="1-1-什么是Go的构建模式"><a href="#1-1-什么是Go的构建模式" class="headerlink" title="1.1 什么是Go的构建模式"></a>1.1 什么是Go的构建模式</h4><p>Go程序的构建过程就是确定包版本，编译包以及将编译后得到的目标文件链接在一起的过程</p>
+<h4 id="1-2-GOPATH的构建模式"><a href="#1-2-GOPATH的构建模式" class="headerlink" title="1.2 GOPATH的构建模式"></a>1.2 GOPATH的构建模式</h4><p>1.GOPATH构建模式的构建过程</p>
+<ul>
+<li><p>在GOPATH构建模式下，Go编译的时候，会在GOPATH的环境变量目录下寻找依赖的第三方包，如果找到了，就使用这个第三方包进行编译，没找到，就会报编译错误</p>
+</li>
+<li><p>如果在本地没有找到第三方包，可以使用go get命令，将第三方包以及第三方包的依赖包下载到本地</p>
+</li>
+</ul>
+<p>在Mac或Linux上，GPOPATH的默认环境变量目录是 $HOME/go</p>
+<p>2.GOPATH构建模式的缺点</p>
+<ul>
+<li><p>go get获取到的时候当前时刻，第三方包的依赖版本，随着时间的演进，第三方包也会更新版本，这样就会导致不同时期获取到的第三方包版本不一样</p>
+</li>
+<li><p>因为go get获取的是最新版本，因此当第三方包的最新版本有bug，也会一直影响程序构建</p>
+</li>
+</ul>
+<p>在GOPATH构建模式下，Go编译器没有关注第三方依赖包的版本</p>
+<h4 id="1-3-vendor机制"><a href="#1-3-vendor机制" class="headerlink" title="1.3 vendor机制"></a>1.3 vendor机制</h4><p>1.什么是vendor机制</p>
+<p>在项目的vendor目录下，将项目所依赖的第三方包缓存起来</p>
+<p>2.vendor机制解决了什么问题</p>
+<p>只要有vendor目录，Go程序会优先使用vendor下缓存的第三方包，不会优先使用GOPATH环境变量目录下的第三方包，因此提交代码的时候，如果将vendor目录一并提交，那其他开发者拉取代码之后，就可以直接进行构建</p>
+<p>3.开启vendor机制的必要条件</p>
+<p>Go项目必须位于GOPATH环境变量配置的某个路径的src目录下面</p>
+<p>4.vendor机制的缺点</p>
+<ul>
+<li><p>Go项目必须位于GOPATH环境变量配置的某个路径的src目录下面</p>
+</li>
+<li><p>vendor目录必须提交到代码仓库，减慢了代码的提交和下载速度</p>
+</li>
+<li><p>开发者需要手工管理依赖包，包括依赖包的分析、版本记录、依赖包的获取等</p>
+</li>
+</ul>
+<h4 id="1-4-Go-Module"><a href="#1-4-Go-Module" class="headerlink" title="1.4 Go Module"></a>1.4 Go Module</h4><p>1.什么是Go Module</p>
+<ul>
+<li><p>Go module是一些Go包的集合，这些包和 module 一起打版本、发布和分发。</p>
+</li>
+<li><p>通常一个代码仓库对应一个Go module</p>
+</li>
+</ul>
+<p>2.go.mod文件</p>
+<ul>
+<li><p>go.mod文件放置在Go Module的顶层目录下</p>
+</li>
+<li><p>一个Go Module和一个go.mod文件一一对应，也就是说，一个Go Module只会存在一个go.mod文件</p>
+</li>
+</ul>
+<p>3.如何创建一个Go Module</p>
+<p><strong>第一步，通过 go mod init 创建 go.mod 文件，将当前项目变为一个 Go Module</strong></p>
+<p>注意：在构建module时， go mod init $modulePath, 这个modulePath怎么写</p>
+<p>modulePath的作用：</p>
+<p>a.定位仓库的地址。如果代码开源到公共托管站点或者公司内部的代码仓库，那modulePath就要带上仓库的地址，这样其他依赖这个module才可以找得到</p>
+<p>b.如果module不在根目录下，就是一个项目中可能有多个module，不在根目录下的module，modulePath中需要带上子目录路径</p>
+<p>c.major版本号。如果major&gt;=2，需要在module path中加上major号后缀</p>
+<p><strong>第二步，通过 go mod tidy 命令下载依赖并自动更新当前go.mod文件</strong></p>
+<p>go mod tidy 下载的依赖 module 会被放置在本地的 module 缓存路径下，默认值为 $GOPATH[0]/pkg/mod，Go 1.15 及以后版本可以通过 GOMODCACHE 环境变量，自定义本地 module 的缓存路径</p>
+<p><strong>第三步，执行 go build，执行新 module 的构建</strong></p>
+<p>go build 命令会读取 go.mod 中的依赖及版本信息，并在本地 module 缓存路径下找到对应版本的依赖 module，执行编译和链接</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Go/">Go</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2022/08/14/20220814芭蕾笔记/">
+        <span class="next-text nav-default">20220814芭蕾日记</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2022/08/15/Go构建模式/" data-title="Go构建模式" data-url="https://liupei.link/2022/08/15/Go构建模式/">
+      </div>
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2020 -
+    
+    2022
+    <span class="footer-author">liupei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"test1"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
