@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liupei.link/"/>
-  <updated>2022-08-16T17:02:46.966Z</updated>
+  <updated>2022-08-17T15:50:28.619Z</updated>
   <id>https://liupei.link/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go各版本构建模式切换</title>
+    <link href="https://liupei.link/2022/08/17/Go%E5%90%84%E7%89%88%E6%9C%AC%E6%9E%84%E5%BB%BA%E6%9C%BA%E5%88%B6%E5%88%87%E6%8D%A2/"/>
+    <id>https://liupei.link/2022/08/17/Go各版本构建机制切换/</id>
+    <published>2022-08-17T15:26:08.000Z</published>
+    <updated>2022-08-17T15:50:28.619Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Go各版本构建模式的切换"><a href="#Go各版本构建模式的切换" class="headerlink" title="Go各版本构建模式的切换"></a>Go各版本构建模式的切换</h3><p>Go不同版本的构建模式和机制不同，因此如果切换了Go的版本，相应的构建模式也要切换，否则会构建失败</p><p>1.只要GO111MODULE的值是on，无论是哪个版本，都开启Go Module模式</p><p>2.只要GO111MODULE的值是off，无论是哪个版本，都是GOPATH模式</p><p>3.小于1.13版本，项目路径在GPOPATH/src目录下 且 包含go.mod文件，则默认开启Go Module模式；否则使用GOPATH模式</p><p>4.等于1.13版本，只要当前目录或子目录下有go.mod文件，就开启Go Module模式；否则使用GOPATH模式</p><p>5.等于1.16版本，只要当前目录或子目录下有go.mod文件，就开启Go Module模式；否则使用GOPATH模式</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Go各版本构建模式的切换&quot;&gt;&lt;a href=&quot;#Go各版本构建模式的切换&quot; class=&quot;headerlink&quot; title=&quot;Go各版本构建模式的切换&quot;&gt;&lt;/a&gt;Go各版本构建模式的切换&lt;/h3&gt;&lt;p&gt;Go不同版本的构建模式和机制不同，因此如果切换了Go的版本，
+      
+    
+    </summary>
+    
+    
+      <category term="Go" scheme="https://liupei.link/tags/Go/"/>
+    
+  </entry>
   
   <entry>
     <title>深入理解GoModule</title>
