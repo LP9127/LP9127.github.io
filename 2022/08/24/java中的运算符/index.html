@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="java中的运算符">
+
+
+
+
+  <meta name="keywords" content="JAVA,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Home">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://liupei.link/2022/08/24/java中的运算符/">
+
+
+<meta name="description" content="1.什么是运算符 运算符是对一个值或者多个值进行计算，并得出计算结果  运算结果的类型有时候是固定的，有时候是根据运算结果来的（两个int相加的结果类型是int，两个bype相加的结果类型是int）  除赋值运算外，计算并不会改变变量的值   123456789101112131415161718192021222324252627public class Operator &amp;#123;    p">
+<meta name="keywords" content="JAVA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java中的运算符">
+<meta property="og:url" content="https://liupei.link/2022/08/24/java中的运算符/index.html">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="1.什么是运算符 运算符是对一个值或者多个值进行计算，并得出计算结果  运算结果的类型有时候是固定的，有时候是根据运算结果来的（两个int相加的结果类型是int，两个bype相加的结果类型是int）  除赋值运算外，计算并不会改变变量的值   123456789101112131415161718192021222324252627public class Operator &amp;#123;    p">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2022-08-24T14:56:59.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java中的运算符">
+<meta name="twitter:description" content="1.什么是运算符 运算符是对一个值或者多个值进行计算，并得出计算结果  运算结果的类型有时候是固定的，有时候是根据运算结果来的（两个int相加的结果类型是int，两个bype相加的结果类型是int）  除赋值运算外，计算并不会改变变量的值   123456789101112131415161718192021222324252627public class Operator &amp;#123;    p">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> java中的运算符 - Home </title>
+  <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Home</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          java中的运算符
+        
+      </h1>
+
+      <time class="post-time">
+          Aug 24 2022
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h4 id="1-什么是运算符"><a href="#1-什么是运算符" class="headerlink" title="1.什么是运算符"></a>1.什么是运算符</h4><ul>
+<li><p>运算符是对一个值或者多个值进行计算，并得出计算结果</p>
+</li>
+<li><p>运算结果的类型有时候是固定的，有时候是根据运算结果来的（两个int相加的结果类型是int，两个bype相加的结果类型是int）</p>
+</li>
+<li><p>除赋值运算外，计算并不会改变变量的值</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span> b1 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span> b2 = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span> b3 = b1+b2; <span class="comment">//这里IDE会有错误提示，b3的值必须是int</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(a+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(a);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出的结果是：</p>
+<p>3</p>
+<p>2</p>
+<h4 id="2-取模运算符"><a href="#2-取模运算符" class="headerlink" title="2.取模运算符 %"></a>2.取模运算符 %</h4><ul>
+<li><p>可以计算余数</p>
+</li>
+<li><p>负数可以取模</p>
+</li>
+<li><p>负数也可以被取模</p>
+</li>
+<li><p>小数也可以取模（基本不会遇到小数取模的场景）</p>
+</li>
+<li><p>取模的结果是正数还是负数，和%前面的数字是正还是负，是一致的</p>
+</li>
+<li><p>%后的数如果是0，java会报错</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println( a % <span class="number">2</span>);  <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line">        System.out.println( a % -<span class="number">2</span>); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line">        System.out.println( a % <span class="number">3</span>);  <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">        System.out.println( a % -<span class="number">6</span>); <span class="comment">// 4</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> a = -<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println( a % <span class="number">2</span>);  <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line">        System.out.println( a % -<span class="number">2</span>); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line">        System.out.println( a % <span class="number">3</span>);  <span class="comment">// -1</span></span><br><span class="line"></span><br><span class="line">        System.out.println( a % -<span class="number">6</span>); <span class="comment">// -4</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-整数的除法运算"><a href="#3-整数的除法运算" class="headerlink" title="3.整数的除法运算"></a>3.整数的除法运算</h4><ul>
+<li><p>int类型除以int类型，结果还是int类型，不会是浮点数</p>
+</li>
+<li><p>如果想要结果是浮点数，则除数和被除数，其中一个是浮点数即可</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(a / b);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<p>3</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Operator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">double</span> a = <span class="number">10.0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(a / b);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<p>3.3333333333333335</p>
+<h4 id="4-比较运算符和布尔运算符"><a href="#4-比较运算符和布尔运算符" class="headerlink" title="4.比较运算符和布尔运算符"></a>4.比较运算符和布尔运算符</h4><p>比较运算符</p>
+<ul>
+<li><blockquote>
+</blockquote>
+</li>
+<li><p>&gt;=</p>
+</li>
+<li><p>&lt;</p>
+</li>
+<li><p>&lt;=</p>
+</li>
+<li><p>!=</p>
+</li>
+<li><p>==</p>
+</li>
+</ul>
+<p>布尔运算符（一般用&amp;&amp; 和 ||，而不用&amp; 和 ｜）</p>
+<ul>
+<li><p>! 非运算符,not运算符；!true=false ; !false=true</p>
+</li>
+<li><p>&amp; 与运算符，只要有一个为false，结果就是false</p>
+</li>
+<li><p>&amp;&amp; 与运算符，运算结果和&amp;一样</p>
+</li>
+<li><p>| 或运算符，只要有一个为true，结果就为true</p>
+</li>
+<li><p>|| 或运算符，运算结果和|一样 （区别在于，如果使用的是||，那只要第一个操作数已经是true了，就不会在计算后一个操作数是true还是false，但是如果使用的是｜，会把两个操作数的结果都计算出来，然后再比较）</p>
+</li>
+</ul>
+<h4 id="5-小括号运算符"><a href="#5-小括号运算符" class="headerlink" title="5.小括号运算符"></a>5.小括号运算符</h4><ul>
+<li>小括号运算符中可以包含任何运算符，小括号决定了运算的顺序</li>
+</ul>
+<h4 id="6-运算符的优先级"><a href="#6-运算符的优先级" class="headerlink" title="6.运算符的优先级"></a>6.运算符的优先级</h4><ul>
+<li><p>( )</p>
+</li>
+<li><p>!</p>
+</li>
+<li><p>*,/,%</p>
+</li>
+<li><p>+,-</p>
+</li>
+<li><p>&gt;,&gt;=,&lt;,&lt;=</p>
+</li>
+<li><p>==</p>
+</li>
+<li><p>!=</p>
+</li>
+<li><p>&amp;,&amp;&amp;,|,||</p>
+</li>
+<li><p>=</p>
+</li>
+</ul>
+<p>为什么赋值运算符优先级最低：因为要选把所有操作数计算完才能赋值</p>
+<p>为什么布尔运算符的优先级低于比较运算符：因为要先比较完大小，得到true或false的结论，才能进行true和false的运算</p>
+<p>为什么比较运算符的优先级低于算数运算符：因为要先进行计算，然后再拿结果比较大小</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/JAVA/">JAVA</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2022/08/24/认识数组/">
+        <span class="next-text nav-default">认识数组</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2022/08/24/java中的运算符/" data-title="java中的运算符" data-url="https://liupei.link/2022/08/24/java中的运算符/">
+      </div>
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2020 -
+    
+    2022
+    <span class="footer-author">liupei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"test1"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
