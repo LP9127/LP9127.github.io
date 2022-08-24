@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="认识数组">
+
+
+
+
+  <meta name="keywords" content="JAVA,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Home">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://liupei.link/2022/08/24/认识数组/">
+
+
+<meta name="description" content="1.重新认识基本类型的变量 变量的基本逻辑——有定才有变，在人看来，变量固定的是名字，改变的是值；但是在计算机看来，不变的是地址，变化的是值  理解计算机如何使用内存，完成变量的功能 （1）内存就是一堆白纸，只能通过页码编号访问，也就是所谓的内存地址  （2）变量就是使用一个固定的地址加上这个地址对应的内存；计算机通过地址，读写地址对应的内存值，完成变量的赋值和访问值的功能，就好像根据页面编号在白">
+<meta name="keywords" content="JAVA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="认识数组">
+<meta property="og:url" content="https://liupei.link/2022/08/24/认识数组/index.html">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="1.重新认识基本类型的变量 变量的基本逻辑——有定才有变，在人看来，变量固定的是名字，改变的是值；但是在计算机看来，不变的是地址，变化的是值  理解计算机如何使用内存，完成变量的功能 （1）内存就是一堆白纸，只能通过页码编号访问，也就是所谓的内存地址  （2）变量就是使用一个固定的地址加上这个地址对应的内存；计算机通过地址，读写地址对应的内存值，完成变量的赋值和访问值的功能，就好像根据页面编号在白">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2022-08-24T00:59:42.632Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="认识数组">
+<meta name="twitter:description" content="1.重新认识基本类型的变量 变量的基本逻辑——有定才有变，在人看来，变量固定的是名字，改变的是值；但是在计算机看来，不变的是地址，变化的是值  理解计算机如何使用内存，完成变量的功能 （1）内存就是一堆白纸，只能通过页码编号访问，也就是所谓的内存地址  （2）变量就是使用一个固定的地址加上这个地址对应的内存；计算机通过地址，读写地址对应的内存值，完成变量的赋值和访问值的功能，就好像根据页面编号在白">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> 认识数组 - Home </title>
+  <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Home</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          认识数组
+        
+      </h1>
+
+      <time class="post-time">
+          Aug 24 2022
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h4 id="1-重新认识基本类型的变量"><a href="#1-重新认识基本类型的变量" class="headerlink" title="1.重新认识基本类型的变量"></a>1.重新认识基本类型的变量</h4><ul>
+<li><p>变量的基本逻辑——有定才有变，在人看来，变量固定的是名字，改变的是值；但是在计算机看来，不变的是地址，变化的是值</p>
+</li>
+<li><p>理解计算机如何使用内存，完成变量的功能</p>
+<pre><code>（1）内存就是一堆白纸，只能通过页码编号访问，也就是所谓的内存地址
+
+（2）变量就是使用一个固定的地址加上这个地址对应的内存；计算机通过地址，读写地址对应的内存值，完成变量的赋值和访问值的功能，就好像根据页面编号在白纸上写字，然后擦掉再重复写的过程
+
+（3）变量的名就是地址，变量的实就是地址的内存值
+</code></pre></li>
+</ul>
+<h4 id="2-认识数组"><a href="#2-认识数组" class="headerlink" title="2.认识数组"></a>2.认识数组</h4><p><strong>理解数组的名与实</strong></p>
+<ul>
+<li><p>数组的实是一块地址连续的内存，就像是编号连续的一踏白纸</p>
+</li>
+<li><p>数组的名，就是这个连续内存的第一个内存的地址</p>
+</li>
+<li><p>数组的变量和基本变量一样，本身是个地址；但是与变量不一样的是，这个地址的值，是数组的“名”，也就是数组的第一个地址</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] book = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+<p><strong>创建数组的过程是</strong></p>
+<ul>
+<li><p>先new一个指定长度的数组（就是一块连续的地址）</p>
+</li>
+<li><p>然后把这一块连续地址中第一个地址的值赋值给变量book</p>
+</li>
+<li><p>book本身作为一个变量，也是有地址的（比如book的地址），然后book这个变量的值就是new出来的那一块连续地址中的第一个地址</p>
+</li>
+</ul>
+<p><strong>数组=数组变量+数组的实体</strong></p>
+<ul>
+<li><p>数组变量[索引]就是在数组原有地址的基础上，加上索引，获得想要的元素</p>
+</li>
+<li><p>所以索引是从0开始的，因为索引变量的值就是数组第一个元素的地址，不需要加一</p>
+</li>
+</ul>
+<h4 id="3-数组的长度"><a href="#3-数组的长度" class="headerlink" title="3.数组的长度"></a>3.数组的长度</h4><ul>
+<li><p>数组变量.length可以获得数组的长度</p>
+</li>
+<li><p>数组创建之后，长度不可以改变</p>
+</li>
+</ul>
+<h4 id="4-数组索引过界和初始值"><a href="#4-数组索引过界和初始值" class="headerlink" title="4.数组索引过界和初始值"></a>4.数组索引过界和初始值</h4><ul>
+<li><p>访问数组过界出错，报错 IndexOutOfBoundsException</p>
+</li>
+<li><p>如果没有把握数组是否会出界，可以把索引和数组长度做比较，注意索引是从0开始，不是从1开始</p>
+</li>
+<li><p>数组中每个元素都有初始值，初始值和类型有关，对于数字类型，初始值是0，boolean类型，初始值是false</p>
+</li>
+</ul>
+<h4 id="5-让数组变量指向新的数组"><a href="#5-让数组变量指向新的数组" class="headerlink" title="5.让数组变量指向新的数组"></a>5.让数组变量指向新的数组</h4><ul>
+<li><p>数组变量可以指向新的数组实体，这时候，数组变量的值就是新的数组实体的地址；这种数组变量的赋值操作，叫做让变量指向新的数组</p>
+</li>
+<li><p>如果没有别的数组变量指向原来的数组实体，也就是说，如果没有变量记得原来数组的地址，原来的数组实体也就不可访问，相当于“消失”了</p>
+</li>
+<li><p>对于非基本类型的变量，计算机都要通过这种“两级跳”的方式实现，基本类型变量，“一跳”就可以</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WhatArray</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">        System.out.println(array[array.length-<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] array1 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        System.out.println(<span class="string">"数组array1的长度是"</span> + array1.length);</span><br><span class="line"></span><br><span class="line">        array1 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        System.out.println(<span class="string">"数组array1的长度是"</span> + array1.length);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>输出：</p>
+<p>0</p>
+<p>数组array1的长度是2</p>
+<p>数组array1的长度是3</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/JAVA/">JAVA</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2022/08/22/20220821芭蕾日记/">
+        <span class="next-text nav-default">20220821芭蕾日记</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2022/08/24/认识数组/" data-title="认识数组" data-url="https://liupei.link/2022/08/24/认识数组/">
+      </div>
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2020 -
+    
+    2022
+    <span class="footer-author">liupei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"test1"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
