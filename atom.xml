@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liupei.link/"/>
-  <updated>2022-08-27T16:49:45.674Z</updated>
+  <updated>2022-09-02T15:37:46.012Z</updated>
   <id>https://liupei.link/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20220902随想</title>
+    <link href="https://liupei.link/2022/09/02/20220902%E9%9A%8F%E6%83%B3/"/>
+    <id>https://liupei.link/2022/09/02/20220902随想/</id>
+    <published>2022-09-02T15:16:18.000Z</published>
+    <updated>2022-09-02T15:37:46.012Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="最后一次"><a href="#最后一次" class="headerlink" title="最后一次"></a>最后一次</h3><p>下周就要去新大楼办公了，也意味着今天是在创维最后一天办公了，看着大家打包完的箱子，还真的有点舍不得，毕竟从一开始工作，就一直在创维办公，算了算，已经有4年多了，上个大学，也不过才4年；想起在创维第一次打卡，还是个戴蓝色工绳稚嫩的实习生，今天在创维最后一次打卡后，就告别这个熟悉的地方啦</p><h3 id="一寸光阴一寸金"><a href="#一寸光阴一寸金" class="headerlink" title="一寸光阴一寸金"></a>一寸光阴一寸金</h3><p>最近突然意识到时间很宝贵，时间过去了，就再也没有了，不像下棋，这盘输了，复盘后可以再来一局，时间如果没有好好珍惜，过去了，就是过去了；有这种感觉，可能是因为有一次去上芭蕾课，被一起上课的两个十四五岁的妹妹叫阿姨开始的吧，有一种自己居然年龄已经这么大了的感觉；另一个原因可能是，最近看镜子里的自己，脸上已经开始出现细纹了，想起自己上大学那会，姐姐大概和我现在的年龄差不多，有一天我们在卫生间洗漱，她突然看着我说，羡慕我年轻，不回长皱纹，当时觉得没什么，只是没想到时间过得这么快，现在自己也有同样感觉了；既然意识到了时间的宝贵，那就好好珍惜吧</p><h3 id="做有价值的事情"><a href="#做有价值的事情" class="headerlink" title="做有价值的事情"></a>做有价值的事情</h3><p>最近对电视剧综艺什么的，提不起兴趣，以前没有这种感觉，可能最近事情有点多，有点焦虑吧，不过这也是一件好事情，可以让自己有时间想想，业余时间，应该怎么规划，才会让自己比较充实</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;最后一次&quot;&gt;&lt;a href=&quot;#最后一次&quot; class=&quot;headerlink&quot; title=&quot;最后一次&quot;&gt;&lt;/a&gt;最后一次&lt;/h3&gt;&lt;p&gt;下周就要去新大楼办公了，也意味着今天是在创维最后一天办公了，看着大家打包完的箱子，还真的有点舍不得，毕竟从一开始工作，就一直
+      
+    
+    </summary>
+    
+    
+      <category term="说说" scheme="https://liupei.link/tags/%E8%AF%B4%E8%AF%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>芭蕾的起源和发展</title>
@@ -463,31 +486,6 @@
     
     
       <category term="思维提升" scheme="https://liupei.link/tags/%E6%80%9D%E7%BB%B4%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>问题分析与解决</title>
-    <link href="https://liupei.link/2020/11/25/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E4%B8%8E%E5%88%86%E6%9E%90/"/>
-    <id>https://liupei.link/2020/11/25/问题解决与分析/</id>
-    <published>2020-11-25T15:40:24.000Z</published>
-    <updated>2021-01-07T14:27:44.727Z</updated>
-    
-    <content type="html"><![CDATA[<p>[TOC]</p><p>在日常生活中遇到问题的时候，一般都是凭经验去思考如何解决这个问题；但是往往因为经验的不足，或者因为环境的变化，以前的经验早已不适用，导致问题没有得到解决；那有没有一个方法能指导我们去分析&amp;解决问题，而不是仅凭经验的判断呢？</p><h4 id="一、问题分析的3个原则"><a href="#一、问题分析的3个原则" class="headerlink" title="一、问题分析的3个原则"></a><strong>一、问题分析的3个原则</strong></h4><h5 id="1-基于事实分析"><a href="#1-基于事实分析" class="headerlink" title="1.基于事实分析"></a><strong>1.基于事实分析</strong></h5><p>基于事实分析可以弥补经验的不足，增加方案的可信度</p><h5 id="2-结构化分析"><a href="#2-结构化分析" class="headerlink" title="2.结构化分析"></a><strong>2.结构化分析</strong></h5><p>遵从MECE法则（相互独立，完全穷尽）：对问题做到不重叠，不遗漏的分析，能够把握问题的核心，成为有效解决方案</p><h5 id="3-以假设为导向"><a href="#3-以假设为导向" class="headerlink" title="3.以假设为导向"></a><strong>3.以假设为导向</strong></h5><p>大胆假设，小心求证，找到真相产生的条件</p><h4 id="二、问题分析的4个步骤"><a href="#二、问题分析的4个步骤" class="headerlink" title="二、问题分析的4个步骤"></a><strong>二、问题分析的4个步骤</strong></h4><p>拆解和定位问题：80%</p><p>解决方案：20%</p><h5 id="1-明确和理解问题"><a href="#1-明确和理解问题" class="headerlink" title="1.明确和理解问题"></a><strong>1.明确和理解问题</strong></h5><p>遇到问题：先搞清楚问题的本质是什么</p><p>如果明确需求：</p><ul><li>找出需求方关心的点</li><li>明确目标（不同的目标，不同的解决方案）</li><li>明确解决问题需要的资源</li></ul><h5 id="2-拆分和定位问题"><a href="#2-拆分和定位问题" class="headerlink" title="2.拆分和定位问题"></a><strong>2.拆分和定位问题</strong></h5><ul><li><p>复杂问题拆分到最小问题（纵向拆分原则）</p><p>复杂问题：掺杂了多个维度和变量的问题，不可直接解决，因此要先进行拆解</p><p>最小问题：最本质，最细微的待解决问题</p><p>把很小的目标融会贯通，用更高层的思维要求自己，找到问题的价值链，找到内部逻辑，确定核心最小问题</p></li><li><p>MECE法则（横向拆分原则）</p><p>搭建逻辑结构：想问题的时候有一条线，不是漫无目的（核心问题和起始问题；问题原因；问题后果；画树；补充）</p></li><li><p>价值链思维（商业问题的最佳拆解模式）</p><p>抓住问题本质并用极简的形式描述出来</p></li><li><p>逻辑树（呈现形式）</p><p>图形化思考</p></li><li><p>假设验证（定位问题）</p><p>假设验证：能够明确目标（证实，证伪），省时省力</p></li></ul><h5 id="3-提出解决方案"><a href="#3-提出解决方案" class="headerlink" title="3.提出解决方案"></a><strong>3.提出解决方案</strong></h5><ul><li>假设验证：MECE原则</li><li>验证结果：果汁稀释法</li></ul><h5 id="4-总结问题"><a href="#4-总结问题" class="headerlink" title="4.总结问题"></a><strong>4.总结问题</strong></h5><ul><li>别人觉得是对的，比自己认为是对的更重要</li><li>从结论不断分析，直到那个不可辩驳的事实</li><li>每一个层级都要控制要点的数目，要突出重点</li></ul><h4 id="三、补充"><a href="#三、补充" class="headerlink" title="三、补充"></a><strong>三、补充</strong></h4><h5 id="1-对信息进行3级分类"><a href="#1-对信息进行3级分类" class="headerlink" title="1.对信息进行3级分类"></a><strong>1.对信息进行3级分类</strong></h5><p>不完备或者逻辑不正确，可能是假信息</p><p>总结问题的时候，先说<strong>结论</strong>，再说<strong>理由</strong>（论据），最后列举出<strong>事实</strong>（案例，支撑论据，证明结论）</p><h5 id="2-结构化分析的方法和工具"><a href="#2-结构化分析的方法和工具" class="headerlink" title="2.结构化分析的方法和工具"></a><strong>2.结构化分析的方法和工具</strong></h5><ul><li>最小问题</li><li>价值链思维</li><li>逻辑树</li><li>MECE原则</li></ul><p>MECE的5种分法：二分法、过程法、要素法、公式法、矩阵法</p><h5 id="3-常见思维工具模型"><a href="#3-常见思维工具模型" class="headerlink" title="3.常见思维工具模型"></a><strong>3.常见思维工具模型</strong></h5><p>SWOT</p><p>ADDT</p><p>4P</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;[TOC]&lt;/p&gt;
-&lt;p&gt;在日常生活中遇到问题的时候，一般都是凭经验去思考如何解决这个问题；但是往往因为经验的不足，或者因为环境的变化，以前的经验早已不适用，导致问题没有得到解决；那有没有一个方法能指导我们去分析&amp;amp;解决问题，而不是仅凭经验的判断呢？&lt;/p&gt;
-&lt;h4 
-      
-    
-    </summary>
-    
-    
-      <category term="效能提升" scheme="https://liupei.link/tags/%E6%95%88%E8%83%BD%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
